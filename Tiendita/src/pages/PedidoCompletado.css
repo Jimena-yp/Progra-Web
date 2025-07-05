@@ -1,0 +1,44 @@
+.pedido-completado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  text-align: center;
+}
+
+.check-container {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.check-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: green;
+  animation: scaleUp 0.4s ease-in-out;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #263246;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+

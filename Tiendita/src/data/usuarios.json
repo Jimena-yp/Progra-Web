@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "nombre": "Admin",
+    "apellido": "Tienda",
+    "correo": "admin@tienda.com",
+    "password": "admin123",
+    "rol": "admin",
+    "activo": true,
+    "fechaRegistro": "2025-05-26",
+    "ordenes": []
+  },
+  {
+    "id": 2,
+    "nombre": "User",
+    "apellido": "Prueba",
+    "correo": "user@tienda.com",
+    "password": "user123",
+    "rol": "cliente",
+    "activo": true,
+    "fechaRegistro": "2025-05-26",
+    "ordenes": []
+  },
+  {
+    "id": 3,
+    "nombre": "Natalie",
+    "apellido": "Clienta",
+    "correo": "natalie@correo.com",
+    "rol": "cliente",
+    "activo": true,
+    "fechaRegistro": "2025-05-20",
+    "ordenes": [
+      {
+        "id": 101,
+        "fecha": "2025-05-21",
+        "estado": "Entregado",
+        "total": 129.9
+      },
+      {
+        "id": 102,
+        "fecha": "2025-05-23",
+        "estado": "Procesando",
+        "total": 79.5
+      }
+    ]
+  }
+]

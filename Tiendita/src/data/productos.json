@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "nombre": "Camiseta Negra",
+    "precio": 49.90,
+    "categoria": "Deporte",
+    "imagen": "https://png.pngtree.com/png-vector/20220120/ourmid/pngtree-black-t-shirt-template-png-image_4293336.png",
+    "descripcion": "Camiseta deportiva de algodón suave, ideal para entrenamientos o salidas casuales."
+  },
+  {
+    "id": 2,
+    "nombre": "Audífonos Bluetooth",
+    "precio": 690.00,
+    "categoria": "Electrónica",
+    "imagen": "https://peruimporta.com/wp-content/uploads/2023/04/Audifono-Earpod-pro-inalambrico.png",
+    "descripcion": "Audífonos inalámbricos con cancelación de ruido y sonido envolvente."
+  },
+  {
+    "id": 3,
+    "nombre": "Silla Gamer",
+    "precio": 1349.00,
+    "categoria": "Hogar",
+    "imagen": "https://www.officemobiliariosperu.com/wp-content/uploads/2023/10/pitstop-negro.png",
+    "descripcion": "Silla ergonómica con diseño moderno, ideal para largas sesiones de juego o trabajo."
+  },
+  {
+    "id": 4,
+    "nombre": "Laptop Acer",
+    "precio": 1780.00,
+    "categoria": "Electrónica",
+    "imagen": "https://www.kabifperu.com/imagenes/prod-23022021193329-laptop-acer-aspire-3-a315-56-58yg-i5-1035g1-nx-hs5al-019-15-6-i5-1tb-8gb-s-sistema-deta.png",
+    "descripcion": "Laptop potente con procesador Intel Core i5, ideal para trabajo, estudio o entretenimiento."
+  },
+  {
+    "id": 5,
+    "nombre": "Smartwatch",
+    "precio": 599.99,
+    "categoria": "Electrónica",
+    "imagen": "https://oechsle.vteximg.com.br/arquivos/ids/16040330-1000-1000/image-6d0d68f373ac4602951b27dfbfad6d28.jpg?v=638283924134700000",
+    "descripcion": "Reloj inteligente con monitoreo de salud, notificaciones y resistencia al agua."
+  },
+  {
+    "id": 6,
+    "nombre": "Zapatos Deportivos",
+    "precio": 189.99,
+    "categoria": "Deporte",
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThX61FDuwfi8FJODj1Vde2H7AfCsF2wz3nlA&s",
+    "descripcion": "Zapatos cómodos y ligeros, perfectos para correr o entrenar diariamente."
+  },
+  {
+    "id": 7,
+    "nombre": "Teclado Mecánico",
+    "precio": 559.99,
+    "categoria": "Electrónica",
+    "imagen": "https://oechsle.vteximg.com.br/arquivos/ids/7324469-1000-1000/imageUrl_2.jpg?v=637810641594700000",
+    "descripcion": "Teclado mecánico con retroiluminación RGB y switches de alto rendimiento."
+  },
+  {
+    "id": 8,
+    "nombre": "Cámara Web",
+    "precio": 165.00,
+    "categoria": "Electrónica",
+    "imagen": "https://claroperupoc.vtexassets.com/arquivos/ids/2278142/image-d1da597271264dd3b3e5ddb70884b93f.jpg?v=638757798733400000",
+    "descripcion": "Cámara web HD con micrófono incorporado, ideal para videollamadas y clases virtuales."
+  }
+]

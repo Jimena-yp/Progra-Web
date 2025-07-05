@@ -1,0 +1,105 @@
+/* AgregarCategoria.css */
+
+.admin-agregar-categoria {
+  max-width: 600px;
+  margin: 2.5rem auto;
+  padding: 2rem 2.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.admin-agregar-categoria h2 {
+  margin-bottom: 1.5rem;
+  color: #222;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.formulario input[type="text"] {
+  padding: 0.6rem 1rem;
+  border: 1.5px solid #d0e3f1;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f7fafd;
+  transition: border 0.2s;
+}
+.formulario input[type="text"]:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+.formulario h3 {
+  margin: 1.2rem 0 0.5rem 0;
+  color: #0077cc;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.lista-productos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  max-height: 220px;
+  overflow-y: auto;
+  background: #fafbfc;
+  border-radius: 8px;
+  padding: 0.7rem 0.5rem;
+  border: 1px solid #e0e0e0;
+}
+
+.producto-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1rem;
+  padding: 0.3rem 0.2rem;
+  border-radius: 6px;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+.producto-item:hover {
+  background: #eaf3fa;
+}
+.producto-item img {
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.formulario button[type="submit"] {
+  margin-top: 1.2rem;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.formulario button[type="submit"]:hover {
+  background: #005fa3;
+}
+
+@media (max-width: 700px) {
+  .admin-agregar-categoria {
+    padding: 1rem 0.5rem;
+  }
+  .formulario {
+    gap: 0.7rem;
+  }
+  .lista-productos {
+    max-height: 150px;
+  }
+}

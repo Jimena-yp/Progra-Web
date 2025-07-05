@@ -1,0 +1,101 @@
+.usuario-detalle {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.usuario-detalle .info {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.usuario-detalle .info p {
+  margin: 0.8rem 0;
+  color: #475569;
+  font-size: 1.05rem;
+}
+
+.usuario-detalle .info strong {
+  color: #1e3a8a;
+  font-weight: 600;
+  min-width: 120px;
+  display: inline-block;
+}
+
+.usuario-detalle table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2rem 0;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.usuario-detalle th,
+.usuario-detalle td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.2s ease;
+}
+
+.usuario-detalle th {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.usuario-detalle tr:hover td {
+  background-color: #f8fafc;
+}
+
+.usuario-detalle tr:last-child td {
+  border-bottom: none;
+}
+
+/* Detalles interactivos */
+.usuario-detalle .acciones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.usuario-detalle .acciones a {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.usuario-detalle .acciones .editar {
+  background-color: #2563eb;
+  color: white;
+  border: 2px solid #2563eb;
+}
+
+.usuario-detalle .acciones .editar:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.usuario-detalle .acciones .volver {
+  color: #2563eb;
+  border: 2px solid #e2e8f0;
+  background: white;
+}
+
+.usuario-detalle .acciones .volver:hover {
+  border-color: #2563eb;
+  background-color: #f8fafc;
+}
