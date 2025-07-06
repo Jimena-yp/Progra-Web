@@ -7,7 +7,7 @@ const RecuperarPassword = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setEnviado(true) // Simulación
+    setEnviado(true) 
   }
 
   return (

@@ -1,0 +1,79 @@
+
+
+.admin-agregar-producto {
+  max-width: 600px;
+  margin: 2.5rem auto;
+  padding: 2rem 2.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.admin-agregar-producto h2 {
+  margin-bottom: 1.5rem;
+  color: #222;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.agregar-producto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.agregar-producto-form input,
+.agregar-producto-form select,
+.agregar-producto-form textarea {
+  padding: 0.6rem 1rem;
+  border: 1.5px solid #d0e3f1;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f7fafd;
+  transition: border 0.2s;
+}
+
+.agregar-producto-form input:focus,
+.agregar-producto-form select:focus,
+.agregar-producto-form textarea:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+.agregar-producto-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.agregar-producto-form button {
+  margin-top: 1.2rem;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.agregar-producto-form button:hover {
+  background: #005fa3;
+}
+
+.mensaje {
+  color: green;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .admin-agregar-producto {
+    padding: 1rem 0.5rem;
+  }
+
+  .agregar-producto-form {
+    gap: 0.7rem;
+  }
+}

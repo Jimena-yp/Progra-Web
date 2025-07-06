@@ -1,16 +1,25 @@
 import { useParams } from 'react-router-dom'
-import productos from '../data/productos.json'
+import { useEffect, useState } from 'react'
 import { useCarrito } from '../context/CarritoContext'
 import './ProductDetail.css'
 
 const ProductDetail = () => {
   const { id } = useParams()
-  const producto = productos.find((p) => p.id === parseInt(id))
-
+  const [producto, setProducto] = useState(null)
   const { agregarProducto, carrito } = useCarrito()
-  console.log("🧩 Desde ProductDetail: carrito actual:", carrito)
+
+  useEffect(() => {
+    fetch(`http://localhost:3001/api/productos`)
+      .then(res => res.json())
+      .then(data => {
+        const prod = data.find((p) => p.id === parseInt(id))
+        setProducto(prod)
+      })
+      .catch(() => setProducto(null))
+  }, [id])
 
   const handleAgregar = () => {
+    if (!producto) return
     agregarProducto({
       id: producto.id,
       nombre: producto.nombre,

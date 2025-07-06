@@ -5,7 +5,7 @@ const Orden = sequelize.define('Orden', {
   usuarioId: DataTypes.INTEGER,
   total: DataTypes.FLOAT,
   estado: DataTypes.STRING,
-  fecha: DataTypes.DATE // <-- Agregamos el campo fecha
+  fecha: DataTypes.DATE 
 });
 
 module.exports = Orden;

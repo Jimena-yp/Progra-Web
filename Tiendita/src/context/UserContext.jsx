@@ -7,7 +7,6 @@ export const useUser = () => useContext(UserContext)
 export const UserProvider = ({ children }) => {
   const [usuario, setUsuario] = useState(null)
 
-  // Al cargar, intenta recuperar sesión desde localStorage
   useEffect(() => {
     const guardado = localStorage.getItem('usuario')
     if (guardado) {
@@ -15,7 +14,7 @@ export const UserProvider = ({ children }) => {
     }
   }, [])
 
-  // Iniciar sesión
+  
   const login = async (correo, password) => {
     try {
       const res = await fetch('http://localhost:3001/api/usuarios')
@@ -32,7 +31,7 @@ export const UserProvider = ({ children }) => {
     }
   }
 
-  // Registrar nuevo usuario
+  
   const registrar = async ({ nombre, apellido, correo, password }) => {
     try {
       const res = await fetch('http://localhost:3001/api/usuarios', {
@@ -50,7 +49,6 @@ export const UserProvider = ({ children }) => {
     }
   }
 
-  // Nueva función para actualizar usuario en contexto y localStorage
   const actualizarUsuario = (nuevo) => {
     setUsuario(nuevo)
     localStorage.setItem('usuario', JSON.stringify(nuevo))

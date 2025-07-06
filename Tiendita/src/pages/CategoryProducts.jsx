@@ -1,13 +1,21 @@
 import { useParams } from 'react-router-dom'
-import productos from '../data/productos.json'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Products.css'
 
 const CategoryProducts = () => {
   const { nombre } = useParams()
+  const [productos, setProductos] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:3001/api/productos')
+      .then((res) => res.json())
+      .then((data) => setProductos(data))
+      .catch(() => setProductos([]))
+  }, [])
 
   const productosFiltrados = productos.filter(
-    (p) => p.categoria.toLowerCase() === nombre.toLowerCase()
+    (p) => p.categoria && p.categoria.toLowerCase() === nombre.toLowerCase()
   )
 
   return (

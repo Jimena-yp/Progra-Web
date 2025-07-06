@@ -2,8 +2,7 @@ import productos from '../data/productos.json'
 import { Link } from 'react-router-dom'
 import './MasVendidos.css'
 
-// Aquí podrías aplicar un filtro si deseas mostrar solo productos populares
-const destacados = productos.slice(0, 8) // o usar alguna propiedad "masVendido: true" si lo agregas
+const destacados = productos.slice(0, 8) 
 
 const MasVendidos = () => {
   return (

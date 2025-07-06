@@ -1,9 +1,19 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import categorias from '../data/categorias.json'
 import './Categorias.css'
 
 const Categorias = () => {
-  const categoriasDestacadas = categorias.slice(0, 3) // solo las 3 primeras
+  const [categorias, setCategorias] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:3001/api/categorias')
+      .then(res => res.json())
+      .then(data => setCategorias(data))
+      .catch(() => setCategorias([]))
+  }, [])
+
+  const categoriasDestacadas = categorias.slice(0, 3)
+
 
   return (
     <section className="categorias">
@@ -16,7 +26,8 @@ const Categorias = () => {
             key={i}
           >
             <div className="categoria-card">
-              <img src={cat.imagen} alt={cat.nombre} />
+              
+              <img src={cat.imagen || '/default-categoria.png'} alt={cat.nombre} />
               <h3>{cat.nombre}</h3>
             </div>
           </Link>

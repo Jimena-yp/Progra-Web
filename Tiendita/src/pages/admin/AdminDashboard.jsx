@@ -10,6 +10,7 @@ const AdminDashboard = () => {
   const [ordenesFiltradas, setOrdenesFiltradas] = useState([])
   const [usuariosFiltrados, setUsuariosFiltrados] = useState([])
   const [usuarios, setUsuarios] = useState([])
+  const [categorias, setCategorias] = useState([]) 
 
   useEffect(() => {
     if (!usuario || usuario.rol !== 'admin') {
@@ -17,7 +18,6 @@ const AdminDashboard = () => {
     }
   }, [usuario, navigate])
 
-  // Obtener usuarios desde la API y filtrar admin
   useEffect(() => {
     fetch('http://localhost:3001/api/usuarios')
       .then(res => res.json())
@@ -25,7 +25,6 @@ const AdminDashboard = () => {
       .catch(() => setUsuarios([]))
   }, [])
 
-  // Obtener todas las órdenes desde la API (sin filtro de fechas)
   useEffect(() => {
     fetch('http://localhost:3001/api/ordenes')
       .then(res => res.json())
@@ -33,10 +32,16 @@ const AdminDashboard = () => {
       .catch(() => setOrdenesFiltradas([]))
   }, [])
 
-  // Usuarios nuevos: puedes dejarlo vacío o mostrar todos
   useEffect(() => {
     setUsuariosFiltrados(usuarios)
   }, [usuarios])
+
+  useEffect(() => {
+    fetch('http://localhost:3001/api/categorias') 
+      .then(res => res.json())
+      .then(data => setCategorias(data))
+      .catch(() => setCategorias([]))
+  }, [])
 
   const ingresosTotales = ordenesFiltradas.reduce((acc, o) => acc + o.total, 0)
 
@@ -57,7 +62,9 @@ const AdminDashboard = () => {
           <p>S/. {ingresosTotales.toFixed(2)}</p>
         </div>
       </div>
+
       <hr style={{ margin: '2rem 0' }} />
+
       <h3>Usuarios Registrados (últimos)</h3>
       <div className="tabla-usuarios">
         <table>
@@ -92,15 +99,33 @@ const AdminDashboard = () => {
           <Link to="/admin/usuarios">Ver todos</Link>
         </div>
       </div>
+
       <hr style={{ margin: '2rem 0' }} />
+
       <h3>Categorías Registradas</h3>
       <div style={{ marginBottom: '1rem' }}>
         <Link to="/admin/categorias" style={{ marginRight: '1rem', color: '#0077cc' }}>
           Ver Categorías
         </Link>
-        <Link to="/admin/categorias/nuevo" style={{ color: '#0077cc' }}>
+        <Link to="/admin/categorias/nuevo" style={{ color: '#0077cc', marginRight: '1rem' }}>
           + Añadir Categoría
         </Link>
+        <Link to="/admin/productos/nuevo" style={{ color: '#0077cc' }}>
+          + Añadir Producto
+        </Link>
+      </div>
+
+      
+      <div className="lista-categorias">
+        {categorias.length === 0 ? (
+          <p>No hay categorías aún.</p>
+        ) : (
+          categorias.map(cat => (
+            <div key={cat.id} className="categoria-item">
+              {cat.nombre}
+            </div>
+          ))
+        )}
       </div>
     </section>
   )

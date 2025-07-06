@@ -25,6 +25,7 @@ import UsuariosAdmin from './pages/admin/UsuariosAdmin'
 import UsuarioDetalle from './pages/admin/UsuarioDetalle'
 import AgregarCategoria from './pages/admin/AgregarCategoria'
 import CategoriasAdmin from './pages/admin/CategoriasAdmin'
+import AdminAgregarProducto from './pages/admin/AgregarProducto'
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
           <Route path="/admin/usuarios/:id" element={<UsuarioDetalle />} />
           <Route path="/admin/categorias" element={<CategoriasAdmin />} />
           <Route path="/admin/categorias/nuevo" element={<AgregarCategoria />} />
+          <Route path="/admin/productos/nuevo" element={<AdminAgregarProducto />} />
 
         </Route>
       </Routes>

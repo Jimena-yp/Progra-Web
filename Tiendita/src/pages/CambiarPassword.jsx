@@ -18,7 +18,7 @@ const CambiarPassword = () => {
       return
     }
     setMensaje('¡Contraseña cambiada exitosamente!')
-    // Aquí iría la lógica real de cambio de contraseña
+    
   }
 
   return (

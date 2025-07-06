@@ -20,7 +20,7 @@ const UsuariosAdmin = () => {
     setUsuarios(actualizados)
   }
 
-  // Solo mostrar usuarios que no sean admin
+  
   const filtrados = usuarios.filter(u => {
     if (u.rol === 'admin') return false
     const texto = `${u.id} ${u.nombre} ${u.apellido}`.toLowerCase()

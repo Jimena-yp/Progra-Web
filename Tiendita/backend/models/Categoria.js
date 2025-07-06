@@ -6,6 +6,9 @@ const Categoria = sequelize.define('Categoria', {
     type: DataTypes.STRING,
     allowNull: false,
     unique: true
+  },
+  imagen: {
+    type: DataTypes.STRING 
   }
 });
 
