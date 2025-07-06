@@ -1,0 +1,43 @@
+.categorias {
+  padding: 2rem;
+  text-align: center;
+}
+
+.categorias h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.categorias-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.categoria-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 180px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.categoria-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.categoria-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.categoria-card h3 {
+  font-size: 1.1rem;
+  color: #333;
+}

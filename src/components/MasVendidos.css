@@ -1,0 +1,75 @@
+.mas-vendidos {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.mas-vendidos h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #232946;
+}
+
+.mas-vendidos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.mas-vendido-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(35, 41, 70, 0.08);
+  padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.mas-vendido-card:hover {
+  box-shadow: 0 6px 18px rgba(35, 41, 70, 0.13);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.mas-vendido-card img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background: #f7f8fa;
+}
+
+.mas-vendido-card h4 {
+  font-size: 1.08rem;
+  color: #232946;
+  margin: 0.5rem 0 0.3rem 0;
+  font-weight: 600;
+}
+
+.mas-vendido-card p {
+  color: #232946;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.mas-vendido-card a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .mas-vendidos-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mas-vendido-card {
+    width: 95vw;
+    max-width: 350px;
+  }
+}
